@@ -16,7 +16,7 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dewanta Rahma Satria — Software Engineer & UX Designer",
+  title: "Portfolio Dewanta Rahma Satria",
   description: "Portfolio Dewanta Rahma Satria — Software Engineer dan UX Designer yang berspesialisasi dalam pengembangan web dan mobile.",
 };
 

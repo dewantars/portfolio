@@ -6,6 +6,13 @@ import { useLanguage } from "@/context/LanguageContext";
 
 export default function Footer() {
   const { t } = useLanguage();
+  const socials = [
+    { name: "GitHub", url: "https://github.com/dewantars" },
+    { name: "Instagram", url: "https://instagram.com/dewanta_rs" },
+    { name: "LinkedIn", url: "https://linkedin.com/in/dewantars/" },
+    { name: "YouTube", url: "https://youtube.com/@dewanta_rs" },
+    { name: "TikTok", url: "https://tiktok.com/@dewanta_rs" },
+  ];
 
   return (
     <footer id="kontak" className="footer-root relative pt-20 pb-10 transition-all"
@@ -27,10 +34,10 @@ export default function Footer() {
 
             <div className="flex gap-3 mt-6">
               {[
-                { icon: <Github size={15} />, href: "https://github.com", label: "GitHub" },
-                { icon: <Instagram size={15} />, href: "https://instagram.com", label: "Instagram" },
-                { icon: <Linkedin size={15} />, href: "https://linkedin.com", label: "LinkedIn" },
-                { icon: <Youtube size={15} />, href: "https://youtube.com", label: "YouTube" },
+                { icon: <Github size={15} />, href: "https://github.com/dewantars", label: "GitHub" },
+                { icon: <Instagram size={15} />, href: "https://instagram.com/dewanta_rs", label: "Instagram" },
+                { icon: <Linkedin size={15} />, href: "https://www.linkedin.com/in/dewantars/", label: "LinkedIn" },
+                { icon: <Youtube size={15} />, href: "https://youtube.com/@dewanta_rs", label: "YouTube" },
               ].map((s) => (
                 <motion.a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
                   whileHover={{ scale: 1.15, y: -2 }} whileTap={{ scale: 0.95 }}
@@ -74,14 +81,19 @@ export default function Footer() {
               {t("footer.social")}
             </h4>
 
-            <div className="grid grid-cols-2 gap-2" style={{ color: "var(--text-secondary)" }}>
-              {["GitHub", "Instagram", "LinkedIn", "YouTube", "TikTok"].map((label) => (
+            <div
+              className="grid grid-cols-2 gap-2"
+              style={{ color: "var(--text-secondary)" }}
+            >
+              {socials.map((social) => (
                 <a
-                  key={label}
-                  href="#"
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm hover:text-purple-500 transition-colors"
                 >
-                  {label}
+                  {social.name}
                 </a>
               ))}
             </div>
