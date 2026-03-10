@@ -15,7 +15,7 @@
   --text-primary:   #F1F0FF;
   --text-secondary: #9CA3AF;
   --text-muted:     #6B7280;
-  --border-color:   rgba(124,58,237,0.2);
+  --borderColor:   rgba(124,58,237,0.2);
   --border-hover:   rgba(168,85,247,0.4);
   --card-bg:        rgba(17,17,24,0.85);
   --skeleton-from:  #111118;
@@ -39,7 +39,7 @@
   --text-primary:   #1a1033;
   --text-secondary: #4B5563;
   --text-muted:     #9CA3AF;
-  --border-color:   rgba(124,58,237,0.15);
+  --borderColor:   rgba(124,58,237,0.15);
   --border-hover:   rgba(124,58,237,0.35);
   --card-bg:        rgba(255,255,255,0.95);
   --skeleton-from:  #E9E7FF;
@@ -115,13 +115,13 @@ body {
    ============================================ */
 .card-glass {
   background: var(--card-bg);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--borderColor);
   backdrop-filter: blur(12px);
   box-shadow: var(--shadow-card);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  transition: borderColor 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 .card-glass:hover {
-  border-color: var(--border-hover);
+  borderColor: var(--border-hover);
 }
 
 /* ============================================
@@ -172,13 +172,13 @@ body {
   color: var(--text-primary) !important;
 }
 [data-theme="light"] .nav-btn {
-  border-color: rgba(124,58,237,0.2) !important;
+  borderColor: rgba(124,58,237,0.2) !important;
   background: rgba(124,58,237,0.04) !important;
   color: var(--text-secondary) !important;
 }
 [data-theme="light"] .nav-btn:hover {
   background: rgba(124,58,237,0.1) !important;
-  border-color: rgba(124,58,237,0.3) !important;
+  borderColor: rgba(124,58,237,0.3) !important;
   color: var(--purple-primary) !important;
 }
 [data-theme="light"] .mobile-menu-overlay {
@@ -199,14 +199,14 @@ body {
    ============================================ */
 [data-theme="light"] .hero-badge {
   background: rgba(124,58,237,0.08) !important;
-  border-color: rgba(124,58,237,0.2) !important;
+  borderColor: rgba(124,58,237,0.2) !important;
 }
 [data-theme="light"] .hero-photo-card {
   background: linear-gradient(135deg, #EDE9FE, #F4F3FF, #EEF2FF) !important;
 }
 [data-theme="light"] .hero-float-badge {
   background: #FFFFFF !important;
-  border-color: rgba(124,58,237,0.2) !important;
+  borderColor: rgba(124,58,237,0.2) !important;
   box-shadow: 0 4px 12px rgba(124,58,237,0.1);
 }
 
@@ -221,12 +221,12 @@ body {
 }
 [data-theme="light"] .skill-pill {
   background: rgba(124,58,237,0.06) !important;
-  border-color: rgba(124,58,237,0.18) !important;
+  borderColor: rgba(124,58,237,0.18) !important;
   color: var(--purple-primary) !important;
 }
 [data-theme="light"] .skill-pill:hover {
   background: rgba(124,58,237,0.12) !important;
-  border-color: rgba(124,58,237,0.3) !important;
+  borderColor: rgba(124,58,237,0.3) !important;
 }
 
 /* ============================================
@@ -255,7 +255,7 @@ body {
 }
 [data-theme="light"] .tool-icon-wrap {
   background: rgba(124,58,237,0.06) !important;
-  border-color: rgba(124,58,237,0.15) !important;
+  borderColor: rgba(124,58,237,0.15) !important;
 }
 
 /* ============================================
@@ -265,11 +265,11 @@ body {
   background: linear-gradient(180deg, var(--bg-page) 0%, #EDE9FE 100%) !important;
 }
 [data-theme="light"] .footer-divider {
-  border-color: rgba(124,58,237,0.12) !important;
+  borderColor: rgba(124,58,237,0.12) !important;
 }
 [data-theme="light"] .footer-social-btn {
   background: rgba(124,58,237,0.06) !important;
-  border-color: rgba(124,58,237,0.18) !important;
+  borderColor: rgba(124,58,237,0.18) !important;
 }
 [data-theme="light"] .footer-social-btn:hover {
   background: rgba(124,58,237,0.12) !important;
@@ -315,7 +315,7 @@ body {
    TRANSITION GLOBAL
    ============================================ */
 *, *::before, *::after {
-  transition-property: background-color, border-color, color, box-shadow;
+  transition-property: background-color, borderColor, color, box-shadow;
   transition-duration: 0.3s;
   transition-timing-function: ease;
 }

@@ -10,17 +10,17 @@ import { useLanguage } from "@/context/LanguageContext";
 interface ProjectsProps { data: Project[]; }
 
 const techColors: Record<string, string> = {
-  "Vue JS":      "background:rgba(74,222,128,0.1);color:#4ade80;border-color:rgba(74,222,128,0.25)",
-  "React JS":    "background:rgba(34,211,238,0.1);color:#22d3ee;border-color:rgba(34,211,238,0.25)",
-  "Next JS":     "background:rgba(156,163,175,0.1);color:#9ca3af;border-color:rgba(156,163,175,0.25)",
-  "Laravel":     "background:rgba(248,113,113,0.1);color:#f87171;border-color:rgba(248,113,113,0.25)",
-  "Flutter":     "background:rgba(96,165,250,0.1);color:#60a5fa;border-color:rgba(96,165,250,0.25)",
-  "MySQL":       "background:rgba(251,146,60,0.1);color:#fb923c;border-color:rgba(251,146,60,0.25)",
-  "Bootstrap":   "background:rgba(168,85,247,0.1);color:#a855f7;border-color:rgba(168,85,247,0.25)",
-  "Supabase":    "background:rgba(52,211,153,0.1);color:#34d399;border-color:rgba(52,211,153,0.25)",
-  "Dart":        "background:rgba(56,189,248,0.1);color:#38bdf8;border-color:rgba(56,189,248,0.25)",
-  "Figma":       "background:rgba(244,114,182,0.1);color:#f472b6;border-color:rgba(244,114,182,0.25)",
-  "TypeScript":  "background:rgba(96,165,250,0.1);color:#60a5fa;border-color:rgba(96,165,250,0.25)",
+  "Vue JS":      "background:rgba(74,222,128,0.1);color:#4ade80;borderColor:rgba(74,222,128,0.25)",
+  "React JS":    "background:rgba(34,211,238,0.1);color:#22d3ee;borderColor:rgba(34,211,238,0.25)",
+  "Next JS":     "background:rgba(156,163,175,0.1);color:#9ca3af;borderColor:rgba(156,163,175,0.25)",
+  "Laravel":     "background:rgba(248,113,113,0.1);color:#f87171;borderColor:rgba(248,113,113,0.25)",
+  "Flutter":     "background:rgba(96,165,250,0.1);color:#60a5fa;borderColor:rgba(96,165,250,0.25)",
+  "MySQL":       "background:rgba(251,146,60,0.1);color:#fb923c;borderColor:rgba(251,146,60,0.25)",
+  "Bootstrap":   "background:rgba(168,85,247,0.1);color:#a855f7;borderColor:rgba(168,85,247,0.25)",
+  "Supabase":    "background:rgba(52,211,153,0.1);color:#34d399;borderColor:rgba(52,211,153,0.25)",
+  "Dart":        "background:rgba(56,189,248,0.1);color:#38bdf8;borderColor:rgba(56,189,248,0.25)",
+  "Figma":       "background:rgba(244,114,182,0.1);color:#f472b6;borderColor:rgba(244,114,182,0.25)",
+  "TypeScript":  "background:rgba(96,165,250,0.1);color:#60a5fa;borderColor:rgba(96,165,250,0.25)",
 };
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
@@ -94,7 +94,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
 function ProjectSkeleton() {
   return (
-    <div className="rounded-3xl overflow-hidden" style={{ border: "1px solid var(--border-color)" }}>
+    <div className="rounded-3xl overflow-hidden" style={{ border: "1px solid var(--borderColor)" }}>
       <div className="h-48 skeleton" />
       <div className="p-6 space-y-3" style={{ background: "var(--bg-card)" }}>
         <div className="h-5 w-3/4 skeleton rounded-lg" />

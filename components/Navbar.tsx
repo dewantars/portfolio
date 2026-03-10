@@ -22,7 +22,7 @@ export default function Navbar() {
 
   // Scroll detection
   useEffect(() => {
-    const sections = ["beranda", "tentang", "pendidikan", "pengalaman", "proyek", "tools", "kontak"];
+    const sections = ["beranda", "tentang", "proyek", "kontak"];
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
       const reversed = [...sections].reverse();
