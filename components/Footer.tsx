@@ -92,7 +92,7 @@ export default function Footer() {
         <div className="footer-divider pt-8 flex flex-col md:flex-row items-center justify-between gap-4"
           style={{ borderTop: "1px solid rgba(124,58,237,0.12)" }}>
           <p className="text-xs font-mono" style={{ color: "var(--text-muted)" }}>
-            © 2024 Dewanta Rahma Satria. {t("footer.rights")}
+            © 2026 Dewanta Rahma Satria. {t("footer.rights")}
           </p>
           <p className="text-xs font-mono" style={{ color: "var(--text-muted)" }}>
             {t("footer.built")}

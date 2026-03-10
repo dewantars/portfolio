@@ -72,7 +72,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-              <h1 className="text-5xl md:text-6xl font-extrabold leading-[1.1] mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] mb-6">
                 <span className="gradient-text">{displayText}</span>
                 <span className="animate-pulse text-purple-400">|</span>
               </h1>

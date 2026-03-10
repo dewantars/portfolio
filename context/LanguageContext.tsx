@@ -67,7 +67,7 @@ const translations: Record<Lang, Record<string, string>> = {
     "footer.contact": "Kontak",
     "footer.social": "Sosial Media",
     "footer.rights": "Hak cipta dilindungi.",
-    "footer.built": "Dibuat dengan Next.js · Tailwind CSS · Supabase",
+    "footer.built": "",
   },
   en: {
     // Navbar
@@ -125,7 +125,7 @@ const translations: Record<Lang, Record<string, string>> = {
     "footer.contact": "Contact",
     "footer.social": "Social Media",
     "footer.rights": "All rights reserved.",
-    "footer.built": "Built with Next.js · Tailwind CSS · Supabase",
+    "footer.built": "",
   },
 };
 
