@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Syne, Space_Mono } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -16,26 +17,16 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: "Dewanta Rahma Satria — Software Engineer & UX Designer",
-  description:
-    "Portfolio Dewanta Rahma Satria — Software Engineer dan UX Designer yang berspesialisasi dalam pengembangan web dan mobile.",
-  keywords: ["Software Engineer", "UX Designer", "Web Developer", "Mobile Developer", "Portfolio"],
-  authors: [{ name: "Dewanta Rahma Satria" }],
-  openGraph: {
-    title: "Dewanta Rahma Satria — Software Engineer & UX Designer",
-    description: "Portfolio profesional Dewanta Rahma Satria",
-    type: "website",
-  },
+  description: "Portfolio Dewanta Rahma Satria — Software Engineer dan UX Designer yang berspesialisasi dalam pengembangan web dan mobile.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="id" suppressHydrationWarning>
+    <html lang="id" data-theme="dark" suppressHydrationWarning>
       <body className={`${syne.variable} ${spaceMono.variable}`}>
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

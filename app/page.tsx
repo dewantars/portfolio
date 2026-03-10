@@ -17,11 +17,10 @@ async function getData() {
     supabase.from("tools").select("*").order("created_at", { ascending: false }),
   ]);
 
-  // Debug — hapus setelah data confirmed tampil
-  console.log("[projects]", projectsRes.data?.length, projectsRes.error?.message);
-  console.log("[education]", educationRes.data?.length, educationRes.error?.message);
-  console.log("[experiences]", experiencesRes.data?.length, experiencesRes.error?.message);
-  console.log("[tools]", toolsRes.data?.length, toolsRes.error?.message);
+  if (projectsRes.error) console.error("[projects]", projectsRes.error.message);
+  if (educationRes.error) console.error("[education]", educationRes.error.message);
+  if (experiencesRes.error) console.error("[experiences]", experiencesRes.error.message);
+  if (toolsRes.error) console.error("[tools]", toolsRes.error.message);
 
   return {
     projects: projectsRes.data?.length ? (projectsRes.data as Project[]) : mockProjects,
@@ -35,13 +34,17 @@ export default async function Home() {
   const { projects, education, experiences, tools } = await getData();
 
   return (
-    <main className="min-h-screen bg-[#0B0B0F] relative">
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="orb-1 absolute top-[-200px] right-[-100px] w-[600px] h-[600px] rounded-full bg-purple-700/20 blur-[120px]" />
-        <div className="orb-2 absolute bottom-[20%] left-[-150px] w-[500px] h-[500px] rounded-full bg-violet-600/15 blur-[100px]" />
-        <div className="absolute top-[40%] right-[20%] w-[300px] h-[300px] rounded-full bg-purple-500/10 blur-[80px]" />
+    <main className="min-h-screen relative" style={{ background: "var(--bg-page)" }}>
+      {/* Orbs */}
+      <div className="orb-wrap fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="orb-1 absolute top-[-200px] right-[-100px] w-[600px] h-[600px] rounded-full blur-[120px]"
+          style={{ background: "rgba(124,58,237,0.18)" }} />
+        <div className="orb-2 absolute bottom-[20%] left-[-150px] w-[500px] h-[500px] rounded-full blur-[100px]"
+          style={{ background: "rgba(109,40,217,0.12)" }} />
       </div>
-      <div className="fixed inset-0 grid-pattern pointer-events-none" />
+      {/* Grid */}
+      <div className="grid-pattern-wrap fixed inset-0 grid-pattern pointer-events-none" />
+
       <Navbar />
       <Hero />
       <About />
